@@ -1,0 +1,70 @@
+h1 {
+  font-family: Lobster;
+  font-size: 45px;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0 1rem 1rem;
+}
+
+body {
+  padding-top: 65px;
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(#615dad, #ffc8da);
+
+}
+
+img {
+  border-top-left-radius: 3%;
+  border-top-right-radius: 3%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  border-radius: 10%;
+}
+
+.description {
+  background-color: #283e50;
+  text-align: center;
+  color: white;
+}
+
+.buttons {
+  border: none;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.pravidla {
+  color: white;
+  background-color: #1fcca4;
+  padding: 1rem;
+}
+
+.hrat {
+  color: white;
+  background-color: #0197f6;
+  padding: 1rem;
+}
+
+.pravidla:hover {
+  content: "";
+  background-color: #1cbb96
+}
+
+.hrat:hover {
+  content: "";
+  background-color: #0090e9;
+}

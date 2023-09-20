@@ -28,7 +28,7 @@ img {
   display: flex;
   flex-direction: column;
   width: 360px;
-  border-radius: 10%;
+  height: 100vh;
 }
 
 .description {
@@ -47,24 +47,25 @@ img {
 }
 
 
-.pravidla {
+.buttons_pravidla {
   color: white;
   background-color: #1fcca4;
   padding: 1rem;
+  border-bottom: 1px solid black;
 }
 
-.hrat {
+.buttons_hrat {
   color: white;
   background-color: #0197f6;
   padding: 1rem;
 }
 
-.pravidla:hover {
+.buttons_pravidla:hover {
   content: "";
   background-color: #1cbb96
 }
 
-.hrat:hover {
+.buttons_hrat:hover {
   content: "";
   background-color: #0090e9;
 }

@@ -56,3 +56,13 @@ document
   .addEventListener('click', addSymbol);
 
 /* --- GAME BONUS --- */
+const restart = (event) => {
+  const alert = confirm('Opravdu chceš začít znovu?');
+  if (alert === false) {
+    event.preventDefault();
+  }
+};
+
+document
+  .querySelector('.game__buttons--restart')
+  .addEventListener('click', restart);

@@ -1,0 +1,137 @@
+/*  --- GAME MAIN STYLY --- */
+
+h1 {
+  font-family: Lobster;
+  font-size: 45px;
+  color: white;
+  text-align: center;
+}
+
+body {
+  padding-top: 5px;
+  padding-bottom: 100vh;
+  background: linear-gradient(#615dad, #ffc8da);
+}
+
+
+/* --- GAME STYLY --- */
+
+.main2 {
+  max-width: 80vmin;
+  margin: auto;
+  max-height: 80vmin;
+}
+
+.game {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.game__player {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.game__player--hraje {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+
+.game__player--symbol {
+  padding-left: 1rem;
+  height: 2rem;
+}
+
+.game__buttons {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 5px
+}
+
+.game__buttons--home {
+  background-color: #1fcca4;
+  padding: 1rem;
+  border-radius: 10%;
+}
+
+.game__buttons--restart {
+  background-color: #0197f6;
+  padding: 1rem;
+  border-radius: 10%;
+}
+
+.game__buttons--home:hover {
+  content: "";
+  background-color: #1cbb96
+}
+
+.game__buttons--restart:hover {
+  content: "";
+  background-color: #0090e9;
+}
+
+.game-panel {
+  border: 1px solid #252424;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.game-panel__buton {
+  width: 8vmin;
+  height: 8vmin;
+  background-color: #bbacd3;
+  cursor: pointer;
+  border: 1px solid #252424;
+}
+
+.game-panel__buton:hover {
+  background-color: #cac2d6;
+}
+
+.game-panel__buton:focus {
+  background-color: #cac2d6;
+}
+
+
+/* --- GAME SYMBOLY --- */
+
+.game-panel__buton--circle {
+  background-image: url(img/circle-bk.png);
+  background-position: center;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  animation: animatedSymbols 0.45s;
+}
+
+.game-panel__buton--cross {
+  background-image: url(img/cross-bk.png);
+  background-position: center;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  animation: animatedSymbols 0.45s;
+}
+
+
+/* --- Bonus: animace --- */
+
+@keyframes animatedSymbols {
+  0% {
+    background-size: 0%;
+  }
+
+  50% {
+    background-size: 50%
+  }
+
+  100% {
+    background-size: 100%;
+  }
+}

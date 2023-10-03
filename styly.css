@@ -16,8 +16,7 @@ p {
 
 
 body {
-  padding-top: 50px;
-  padding-bottom: 100vh;
+  margin: auto;
   display: flex;
   justify-content: center;
   background: linear-gradient(#615dad, #ffc8da);

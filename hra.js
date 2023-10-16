@@ -19,32 +19,42 @@ const addSymbol = (event) => {
 
 /* --- HERNÍ POLE --- */
 
-const herniPole = Array.from(buttons).map((button) => {
-  if (button.classList.contains('game-panel__buton--circle')) {
-    return 'o';
-  } else if (button.classList.contains('game-panel__buton--cross')) {
-    return 'x';
-  }
-  return '_';
-});
+const played = () => {
+  const herniPole = Array.from(buttons).map((field) => {
+    if (field.classList.contains('game-panel__buton--circle')) {
+      return 'o';
+    } else if (field.classList.contains('game-panel__buton--cross')) {
+      return 'x';
+    } else {
+      return '_';
+    }
+  });
 
-const vitez = findWinner(herniPole);
-if (vitez === 'o' || vitez === 'x') {
-  const winnerIs = () => {
-    alert(`Vyhrál hráč se symbolem ${vitez}.`);
-    window.location.reload();
-  };
-  setTimeout(winnerIs, 500);
-} else if (vitez === 'tie') {
-  const tieIs = () => {
-    alert(`Remíza. Musíte začít znovu`);
-    window.location.reload();
-  };
-  setTimeout(tieIs, 500);
-}
+  const vitez = findWinner(herniPole);
+  if (vitez === 'o') {
+    const winnerIs = () => {
+      alert(`Vyhrál hráč se symbolem O.`);
+      window.location.reload();
+    };
+    setTimeout(winnerIs, 500);
+  } else if (vitez === 'x') {
+    const winnerIs = () => {
+      alert(`Vyhrál hráč se symbolem X.`);
+      window.location.reload();
+    };
+    setTimeout(winnerIs, 500);
+  } else if (vitez === 'tie') {
+    const tieIs = () => {
+      alert(`Remíza. Musíte začít znovu`);
+      window.location.reload();
+    };
+    setTimeout(tieIs, 500);
+  }
+};
 
 buttons.forEach((button) => {
   button.addEventListener('click', addSymbol);
+  button.addEventListener('click', played);
 });
 
 /* --- RESTART --- */
